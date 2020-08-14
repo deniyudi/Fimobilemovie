@@ -1,0 +1,178 @@
+<style>
+    .demo-swiper .swiper-slide {
+      font-size: 25px;
+      font-weight: 300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      color: #000;
+    }
+    .demo-swiper .swiper-slide {
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+    .demo-swiper {
+      margin: 0px 0 35px;
+      font-size: 18px;
+      height: 120px;
+    }
+    .demo-swiper.demo-swiper-auto .swiper-slide {
+      width: 85%;
+    }
+    .demo-swiper.demo-swiper-auto .swiper-slide:nth-child(2n) {
+      width: 70%;
+    }
+    .demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
+      width: 30%;
+    }
+
+    </style>
+
+<template>
+    <div class="page light">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <figure class="background" style="background-color: gray;"></figure>
+                <div class="left">
+                    <a href="#" class="link icon-only panel-open" data-panel="left">
+                        <span class="new-notification"></span>
+                        <i class="icon material-icons" style="color: white;">menu</i>
+                    </a>
+                </div>
+                <div class="title"><img src="../img/svelte-logo.svg " alt="svelte-logo" class="svelte-logo"> </div>
+                <div class="right">
+                    <a href="/noticationslist/" class="link icon-only">
+                        <i class="material-icons"style="color: white;">notifications_none</i><span class="counts">9+</span>
+                    </a>
+                </div>
+    
+                <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+                    <div class="searchbar-inner">
+                        <div class="searchbar-input-wrap">
+                            <input type="search" placeholder="Search components">
+                            <i class="searchbar-icon"></i>
+                            <span class="input-clear-button"></span>
+                        </div>
+                        <span class="searchbar-disable-button if-not-aurora"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="tabs">
+      
+        <div id="tab-1" class="page-content tab tab-active">  
+
+            <div class="block">
+                <div class="card wrapperh shadow mt-4 h-190 responsive" style="background: url(https://image.tmdb.org/t/p/w220_and_h330_face/qymaJhucquUwjpb8oiqynMeXnID.jpg);background-size: cover; background-position: center;">
+                    <div class="card-content wrapperh card-content-padding ">
+                      <div class="contenth">
+                        <div class="text">
+                           <h1>hasdlsad</h1>
+                           <p>asdbhadsas</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+
+            <form class="searchbar">
+                <div class="searchbar-inner">
+                  <div class="searchbar-input-wrap">
+                    <input type="search" placeholder="Search Movie">
+                    <i class="searchbar-icon"></i>
+                    <span class="input-clear-button"></span>
+                  </div>
+                  <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+                </div>
+            </form>
+            
+            <h6 class="block-title">Movie Genre<a href="" class="float-right small">View All</a></h6>
+            <!-- <div class="block"> -->
+                  
+                <!-- Swiper -->
+                <div class="swiper-container swiper-init swiper-container-initialized swiper-container-horizontal" data-pagination="{&quot;el&quot;: &quot;.swiper-pagination&quot;}" data-space-between="20" data-slides-per-view="2">
+                    <div class="swiper-wrapper h-250 margin-bottom-half">
+                        <div class="swiper-slide swiper-slide-active" style="width: 303.5px; margin-right: 20px;">
+                            <div class="card shadow-sm border-0 bg-dark text-white h-230">
+                                <figure class="background" style="background-image: url(https://image.tmdb.org/t/p/w440_and_h660_face/ysFxqlf0qjPxt4c8BRvLfuQqsAK.jpg);">
+                                    
+                                </figure>
+                                <div class="card-content card-content-padding h-200">
+                                    <a href="" class="button button-rounded-36 shadow-sm button-fab button-fill color-gray margin-bottom-half"><i class="material-icons md-14">arrow_forward</i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" style="width: 303.5px; margin-right: 20px;">
+                          <div class="card shadow-sm border-0 bg-dark text-white h-230">
+                              <figure class="background" style="background-image: url(https://image.tmdb.org/t/p/w220_and_h330_face/KoYWXbnYuS3b0GyQPkbuexlVK9.jpg);">
+                                  
+                              </figure>
+                              <div class="card-content card-content-padding h-200">
+                                  
+                                  <!-- <div class="text-align-top"><h3>Horror<h3></div> -->
+                                  
+                                  <a href="" class="button button-rounded-36 shadow-sm button-fab button-fill color-gray margin-bottom-half"><i class="material-icons md-14">arrow_forward</i></a>
+                                  
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <!-- <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div> -->
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+              </div>
+
+              <hr size="2px" width="100%">
+            
+            <h6 class="block-title">MOST POPULAR<a href="" class="float-right small">More</a></h6>
+            <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="10" data-slides-per-view="3" class="swiper-container swiper-init demo-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card demo-card-header-pic">
+                    <div style="background-image:url(https://image.tmdb.org/t/p/w220_and_h330_face/oehFopDepz3tgxTzISOb97C41jy.jpg)" class="card-header align-items-flex-end"></div>
+                    <div class="card-content" style="max-width: 250px; min-width: 100px;"></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card demo-card-header-pic">
+                    <div style="background-image:url(https://image.tmdb.org/t/p/w220_and_h330_face/da22ZBmrDOXOCDRvr8Gic8ldhv4.jpg)" class="card-header align-items-flex-end"></div>
+                    <div class="card-content" style="max-width: 250px; min-width: 100px;">
+                      <!-- <p class="date">Posted on January 21, 2015</p>
+                      <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p> -->
+                    </div>
+                  </div>
+                </div>
+
+                <a href="/detmov/" class="link">
+                <div class="swiper-slide">
+                  <div class="card demo-card-header-pic">
+                    <div style="background-image:url(https://image.tmdb.org/t/p/w220_and_h330_face/wHa6KOJAoNTFLFtp7wguUJKSnju.jpg)" class="card-header align-items-flex-end"></div>
+                    <div class="card-content" style="max-width: 250px; min-width: 100px;">
+                      <!-- <p class="date">Posted on January 21, 2015</p>
+                      <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p> -->
+                    </div>
+                  </div>
+                </div>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</template>
+
+<script>
+  return{
+    data:function(){
+      const result = fetch('https://api.themoviedb.org/3/movie/popular?api_key=7e97f4650ad722d5b44df91dee514674&page=1').then(res=>res.json());
+        console.log(result);
+    }
+  }
+</script>
