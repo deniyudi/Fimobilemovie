@@ -66,12 +66,8 @@ var routes = [
 
 
   {
-    path: '/detmovtemp/',
-    componentUrl: './pages/Detailmovietemp.html',
-  },
-  {
     path: '/detmov/',
-    url: './pages/Detailmovie.html',
+    componentUrl: './pages/Detailmovie.html',
   },
   {
     path: '/movtemp/',
