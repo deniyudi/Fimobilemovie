@@ -42,7 +42,7 @@
         <div class="page-content">
             <div class="block">
                 <div class="card demo-card-header-pic">
-                    <div style="background-image:url(https://image.tmdb.org/t/p/w220_and_h330_face/wHa6KOJAoNTFLFtp7wguUJKSnju.jpg);" class="card-header align-items-flex-end" style="background-size: cover;"></div>
+                    <img src="https://image.tmdb.org/t/p/w1280{{movie.poster_path}}" width="100%" style="border-radius:2%;"/>
                     <!-- <div class="card-content card-content-padding">
                       <div class="subtitle">
                       </div>
@@ -54,7 +54,7 @@
                                     <div class="avatar avatar-50 no-shadow border-0">    
                                         <i class="material-icons text-template ">star_lefthalf_fill</i>
                                     </div>
-                                    <div class="col align-self-center pl-0">4.2</div>
+                                    <div class="col align-self-center pl-0">{{movie.vote_average}}</div>
                                 </div>
                             </div>
                         </span>
@@ -64,7 +64,7 @@
                                     <div class="avatar avatar-50 no-shadow border-0">    
                                         <i class="material-icons text-template ">visibility</i>
                                     </div>
-                                <div class="col align-self-center pl-0"></div> 
+                                <div class="col align-self-center pl-0">{{movie.popularity}}</div> 
                                 </div>
                             </div>
                         </span>
@@ -75,36 +75,37 @@
                                         <i class="material-icons text-template ">watch_later
                                         </i>
                                     </div>
-                                <div class="col align-self-center pl-0">67 min</div>
+                                <div class="col align-self-center pl-0">{{movie.runtime}} min</div>
                                 </div>
                             </div>
                         </span>
                     </div>
                     <div class="card-footer h-120">
                         <div class="col">
-                            <h3 style="font-weight: bold; color: black;">The Flash</h3>
-                            <p>After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only "meta-human" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent.</p>
+                            <h3 style="font-weight: bold; color: black;">{{movie.original_title}}</h3>
+                            <p>{{movie.overview}}</p>
                         </div>
                     </div>
                     <div class="card-footer">
                         <div class="col">
                             <tr>
-                                <td>Release</td>
+                                <td><b>Release</b></td>
                                 <td>:</td>
-                                <td>12 August 2010</td>
+                                <td>{{movie.release_date}}</td>
                             </tr>
                         </div>
                     </div>
                     <div class="card-footer">
                         <span>
                             <div class="col">
-                                <b>
-                                    <p>Saputra</p>
-                                </b>
-                                <p>Kreator</p>
+                                <tr>
+                                    <td><b>{{movie.directors[0].job}}</b></td>
+                                    <td>:</td>
+                                    <td>{{movie.directors[0].name}}</td>
+                                </tr>
                             </div>
                         </span>
-                        <span>
+                        <!-- <span>
                             <div class="col">
                                 <b>
                                     <p>Greg Nowkolow</p>
@@ -119,7 +120,7 @@
                                 </b>
                                 <p>Kreator</p>
                             </div>
-                        </span>
+                        </span> -->
                     </div>
                 </div>
                 <div class="card">
@@ -128,30 +129,30 @@
                       <div class="list media-list">
                         <ul>
                           <li class="item-content">
-                            <div class="item-media"><img src="https://image.tmdb.org/t/p/w66_and_h66_face/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg" width="80" style="border-radius: 10%;"/></div>
+                            <div class="item-media"><img src="https://image.tmdb.org/t/p/w120_and_h133_face{{movie.actors[0].profile_path}}" width="80" style="border-radius: 10%;"/></div>
                             <div class="item-inner">
                               <div class="item-title-row">
-                                <div class="item-title">Rowbert Downey Jr</div>
+                                <div class="item-title">{{movie.actors[0].name}}</div>
                               </div>
-                              <div class="item-subtitle">Tony Stark/Iron Man</div>
+                              <div class="item-subtitle">{{movie.actors[0].character}}</div>
                             </div>
                           </li>
                           <li class="item-content">
-                            <div class="item-media"><img src="https://image.tmdb.org/t/p/w120_and_h133_face/kN7sPp4ObBcGHsgNQNwawNpuIky.jpg" width="80" style="border-radius: 10%;"/></div>
+                            <div class="item-media"><img src="https://image.tmdb.org/t/p/w120_and_h133_face{{movie.actors[1].profile_path}}" width="80" style="border-radius: 10%;"/></div>
                             <div class="item-inner">
                               <div class="item-title-row">
-                                <div class="item-title">Chris Hemsworth</div>
+                                <div class="item-title">{{movie.actors[1].name}}</div>
                               </div>
-                              <div class="item-subtitle">Thor Odinson</div>
+                              <div class="item-subtitle">{{movie.actors[1].character}}</div>
                             </div>
                           </li>
                           <li class="item-content">
-                            <div class="item-media"><img src="https://image.tmdb.org/t/p/w66_and_h66_face/6NsMbJXRlDZuDzatN2akFdGuTvx.jpg" width="80" style="border-radius: 10%;"/></div>
+                            <div class="item-media"><img src="https://image.tmdb.org/t/p/w120_and_h133_face{{movie.actors[2].profile_path}}" width="80" style="border-radius: 10%;"/></div>
                             <div class="item-inner">
                               <div class="item-title-row">
-                                <div class="item-title">Scarlett Johansson</div>
+                                <div class="item-title">{{movie.actors[2].name}}</div>
                               </div>
-                              <div class="item-subtitle">Black Widow</div>
+                              <div class="item-subtitle">{{movie.actors[2].character}}</div>
                             </div>
                           </li>
                         </ul>
@@ -168,35 +169,25 @@
 <script>
     const API_URL = 'https://api.themoviedb.org/3/';
     const API_KEY = '7e97f4650ad722d5b44df91dee514674';
-    const MOVIE_ENDPOINT = id => `${API_URL}movie/${id}?api_key=${API_KEY}`;
+    const MOVIE_ENDPOINT = id => `https://api.themoviedb.org/3/movie/${id}?api_key=7e97f4650ad722d5b44df91dee514674`;
     const CREDITS_ENDPOINT = id => `${API_URL}movie/${id}/credits?api_key=${API_KEY}`;
 
     return {
         
-        data: function(){
+        data: async function(){
 
-        // setTimeout(function(){
-        //     console.log(window.localStorage.getItem('id'));
-        // },900)
-      
-            
-            var isLoading;
-            var error;
             var movie;
-
-            var idmov = window.localStorage.getItem('id');
+            
                 try{
-                    isLoading = true;
-                    error = false;
-                    movie = fetchMovie(idmov);
+                    idmov = window.localStorage.getItem('id');
+                    movie = await fetchMovie(idmov);
                     console.log(movie);
                 }catch(err){
                     error = true;
                 }
-                isLoading = false;
 
              async function fetchMovie (movieId) {
-                const endpoint = MOVIE_ENDPOINT(movieId);
+                const endpoint = `https://api.themoviedb.org/3/movie/${movieId}?api_key=7e97f4650ad722d5b44df91dee514674`;
                 const creditsEndpoint = CREDITS_ENDPOINT(movieId);
 
                 const result = await (await fetch(endpoint)).json();
@@ -211,7 +202,11 @@
                     actors: creditsResult.cast,
                     directors
                 }
-        }
+        
+            }
+            return{
+                movie
+            }
     }
     }
 </script>

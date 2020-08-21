@@ -101,69 +101,60 @@
             <h6 class="block-title">MOST POPULAR<a href="" class="float-right small">More</a></h6>
             <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="10" data-slides-per-view="3" class="swiper-container swiper-init demo-swiper">
               <div class="swiper-wrapper">
+
                 <div class="swiper-slide">
-                  <div class="card demo-card-header-pic" style="max-width: 750px; width: 550px; min-width: 100px;">
-                    <div style="background-image:url(https://image.tmdb.org/t/p/w1280{{movies.movies[3].backdrop_path}})" class="card-header align-items-flex-end"></div>
-                    <div class="card-content" style="max-width: 250px; min-width: 100px;"></div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card demo-card-header-pic" style="max-width: 750px; width: 550px; min-width: 100px;">
-                    <div style="background-image:url(https://image.tmdb.org/t/p/w1280{{movies.movies[4].backdrop_path}})" class="card-header align-items-flex-end"></div>
-                    <div class="card-content" style="max-width: 250px; min-width: 100px;"></div>
-                  </div>
+                  <a href="/detmov/" class="link" @click="HI({{movies.movies[3].id}})">
+                      <img src="https://image.tmdb.org/t/p/w1280{{movies.movies[3].poster_path}}" width="110" style="border-radius:5%;"/>
+                  </a>
                 </div>
 
-                <a href="/detmov/" class="link" @click="HI({{movies.movies[9].id}})">
                 <div class="swiper-slide">
-                  <div class="card demo-card-header-pic" style="max-width: 750px; width: 550px; min-width: 100px;">
-                    <div style="background-image:url(https://image.tmdb.org/t/p/w1280{{movies.movies[9].backdrop_path}})" class="card-header align-items-flex-end" style="background-position: left;"></div>
-                    <div class="card-content" style="max-width: 250px; min-width: 100px;">
-                      <!-- <p class="date">Posted on January 21, 2015</p>
-                      <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p> -->
-                    </div>
-                  </div>
+                  <a href="/detmov/" class="link" @click="HI({{movies.movies[4].id}})">
+                    <img src="https://image.tmdb.org/t/p/w1280{{movies.movies[4].poster_path}}" width="110" style="border-radius:5%;"/>
+                  </a>
                 </div>
-                </a>
+
+                <div class="swiper-slide">
+                  <a href="/detmov/" class="link" @click="HI({{movies.movies[5].id}})">
+                    <img src="https://image.tmdb.org/t/p/w1280{{movies.movies[5].poster_path}}" width="110" style="border-radius:5%;"/>
+                  </a>
+                </div>
+              
               </div>
             </div>
+
+            <br>
 
             <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="10" data-slides-per-view="3" class="swiper-container swiper-init demo-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="card demo-card-header-pic"  style="max-width: 750px; width: 550px; min-width: 100px;">
-                    <div style="background-image:url(https://image.tmdb.org/t/p/w1280{{movies.movies[6].backdrop_path}})" class="card-header align-items-flex-end"></div>
-                    <!-- <div class="card-content card-content-padding">
-                      <h5>Avengers</h5>
-                    </div> -->
-                  </div>
+                  <a href="/detmov/" class="link" @click="HI({{movies.movies[6].id}})">
+                      <img src="https://image.tmdb.org/t/p/w1280{{movies.movies[6].poster_path}}" width="110" style="border-radius:5%;"/>
+                  </a>
                 </div>
+
                 <div class="swiper-slide">
-                  <div class="card demo-card-header-pic"  style="max-width: 750px; width: 550px; min-width: 100px;">
-                    <div style="background-image:url(https://image.tmdb.org/t/p/w1280{{movies.movies[5].backdrop_path}})" class="card-header align-items-flex-end"></div>
-                    <!-- <div class="card-content card-content-padding">
-                      <h5>Avengers</h5>
-                    </div> -->
-                  </div>
+                  <a href="/detmov/" class="link" @click="HI({{movies.movies[7].id}})">
+                      <img src="https://image.tmdb.org/t/p/w1280{{movies.movies[7].poster_path}}" width="110" style="border-radius: 5%;"/>
+                  </a>
                 </div>
+
                 <div class="swiper-slide">
-                  <div class="card demo-card-header-pic"  style="max-width: 750px; width: 550px; min-width: 100px;">
-                    <div style="background-image:url(https://image.tmdb.org/t/p/w1280{{movies.movies[7].backdrop_path}})" class="card-header align-items-flex-end"></div>
-                    <!-- <div class=" card-content card-content-padding">
-                      <h5>Avengers</h5>
-                    </div> -->
-                  </div>
+                  <a href="/detmov/" class="link" @click="HI({{movies.movies[8].id}})">
+                      <img src="https://image.tmdb.org/t/p/w1280{{movies.movies[8].poster_path}}" width="110" style="border-radius: 5%;"/>
+                  </a>
                 </div>
+
                 <div class="swiper-slide">
-                  <div class="card demo-card-header-pic"  style="max-width: 750px; width: 550px; min-width: 100px;">
-                    <div style="background-image:url(https://image.tmdb.org/t/p/w1280{{movies.movies[8].backdrop_path}})" class="card-header align-items-flex-end"></div>
-                    <!-- <div class="card-content card-content-padding">
-                      <h5>Avengers</h5>
-                    </div> -->
-                  </div>
+                  <a href="/detmov/" class="link" @click="HI({{movies.movies[9].id}})">
+                      <img src="https://image.tmdb.org/t/p/w1280{{movies.movies[9].poster_path}}" width="110" style="border-radius: 5%;"/>
+                  </a>
                 </div>
-                  </div>
-                  </div>
+
+              </div>
+            </div>  
+              </div>
+            </div>
 
           </div>
         </div>
